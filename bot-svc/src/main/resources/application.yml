@@ -1,0 +1,17 @@
+# application.yml
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: bot-service
+
+staffjoy:
+  common:
+    sentry-dsn: ${SENTRY_DSN}
+    deploy-env: ${DEPLOY:V2}
+  email-service-endpoint: http://email-service:8080
+  sms-service-endpoint: http://sms-service:8080
+  company-service-endpoint: http://company-service:8080
+  account-service-endpoint: http://account-service:8080
+  force-email-preference: ${FORCE_EMAIL_PREFERENCE:true}
